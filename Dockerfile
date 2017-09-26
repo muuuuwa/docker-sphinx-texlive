@@ -2,8 +2,8 @@ FROM ubuntu:16.04
 
 RUN apt-get update && apt-get install -y -q \
   build-essential \
-  python-dev \
-  python-pip \
+  python3-dev \
+  python3-pip \
   libjpeg8-dev \
   zlib1g-dev \
   libtiff5-dev \
@@ -15,6 +15,6 @@ RUN apt-get update && apt-get install -y -q \
 RUN mkdir /docs/
 WORKDIR /docs/
 COPY requirements.txt /docs/
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
-CMD make latexpdfja
+CMD export LC_ALL=C.UTF-8; alias python=python3; make latexpdf

@@ -5,3 +5,5 @@ sphinxcontrib-seqdiag
 sphinxcontrib-actdiag
 sphinxcontrib-nwdiag
 reportlab
+recommonmark
+sphinx_rtd_theme
