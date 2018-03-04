@@ -14,6 +14,11 @@ RUN apt-get update && apt-get install -y -q \
 
 RUN mkdir /docs/
 WORKDIR /docs/
+
+
+RUN mkdir /src/
+ENV PYTHONPATH /src
+
 COPY requirements.txt /docs/
 RUN pip3 install -r requirements.txt
 
