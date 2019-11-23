@@ -1,4 +1,6 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
+
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y -q \
   build-essential \
@@ -10,6 +12,7 @@ RUN apt-get update && apt-get install -y -q \
   libfreetype6-dev \
   fonts-takao \
   fonts-vlgothic \
+  fonts-noto-cjk-extra \
   texlive-full
 
 RUN mkdir /docs/
